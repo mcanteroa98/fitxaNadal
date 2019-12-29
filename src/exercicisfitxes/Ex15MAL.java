@@ -9,10 +9,10 @@ import java.util.Scanner;
  *
  * @author bataparato
  */
-public class Ex15 {
+public class Ex15MAL {
     Scanner sc = new Scanner(System.in);
     
-    public Ex15(){
+    public Ex15MAL(){
     
     }
     
@@ -43,7 +43,7 @@ public class Ex15 {
     }
     
     public static void main(String[] args) {
-        Ex15 ob = new Ex15();
+        Ex15MAL ob = new Ex15MAL();
         
         int j = ob.leerNumero();
         int [] array = new int [j];
