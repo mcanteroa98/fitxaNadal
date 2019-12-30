@@ -11,30 +11,40 @@ import java.util.Scanner;
  *
  * @author bataparato
  */
-public class Ex31Mal {
+public class Ex31 {
     String respuesta;
     String orden (int array []){
         int k = array[0];
+        int j = 0;
+        int w = 0;
+        int sum = 0;
         for (int i = 1; i < array.length; i++) {
+            sum += array[i];
+            
             if (array[i]<k){
-                k = array[i];
-                if ((array[i-1])<k){
-                    respuesta = "Disminuye";
-                }
+                j += array[i];
             }
-            else{
-                if (array[i]>k){
-                k = array[i];
-                if (array[i-1]>k){
-                    respuesta = "Crece";
-                }
+            if (array[i]>k){
+                w += array[i];  
             }
+        }
+        
+        if (sum == j || sum == w){
+            if (sum == j){
+                respuesta = "Disminuye";
             }
+            if (sum == w){
+                respuesta = "Crece";
+            }
+        }
+        else{
+            respuesta = "No estan ordenados";
         }
         return respuesta;
     }
+    
     public static void main(String[] args) {
-        Ex31Mal ob = new Ex31Mal();
+        Ex31 ob = new Ex31();
         Scanner sc = new Scanner(System.in);
         int [] array = new int[3];
         for (int i = 0; i < array.length; i++) {
